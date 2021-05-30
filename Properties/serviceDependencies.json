@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "type": "mssql",
+      "connectionId": "",
+      "suggestion": "true",
+      "ignored": "true"
+    },
+    "cosmosdb1": {
+      "type": "cosmosdb",
+      "connectionId": "Adam"
+    }
+  }
+}
