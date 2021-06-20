@@ -9,6 +9,9 @@ namespace BiblioWebApp.Models
     {
         public int Id { get; set; }
         public string Nazwa { get; set; }
+
+        //public string SearchTerm { get; set; }
+
         public string Autor { get; set; }
         public string Opis { get; set; }
         public string Kategoria { get; set; }

@@ -4,9 +4,11 @@ using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using BiblioWebApp.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace BiblioWebApp.Controllers
 {
@@ -16,11 +18,13 @@ namespace BiblioWebApp.Controllers
 
 
         // GET: Biblios
-        public ActionResult Index()
+        public ActionResult Index(string Szukaj)
         {
-            return View(db.Biblios.ToList());
+            //return View(db.Biblios.ToList());
+            return View(db.Biblios.Where(x => x.Kategoria.Contains(Szukaj) || Szukaj == null).ToList());
         }
 
+        
         // GET: Biblios/Details/5
         public ActionResult Details(int? id)
         {
@@ -115,6 +119,7 @@ namespace BiblioWebApp.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
 
         protected override void Dispose(bool disposing)
         {

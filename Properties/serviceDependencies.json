@@ -8,9 +8,7 @@
     },
     "mssql1": {
       "type": "mssql",
-      "connectionId": "",
-      "suggestion": "true",
-      "ignored": "true"
+      "connectionId": "Adam"
     }
   }
 }
